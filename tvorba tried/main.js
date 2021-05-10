@@ -1,3 +1,4 @@
+import{TreeFrog} from './animal.js'
 
 let news = document.getElementById('news');
 let zvieratko = new Animal('mátoha', 'zelená', news);

@@ -1,9 +1,10 @@
-class Animal{
+export class Animal{
     // public, private, protected... premenné :D
     _dead = false;
     constructor(name,colour,news){
         this.name = name;
         this.colour = colour;
+        this.weight = weight;
         this.news = news;
         this.informWorld('sa narodil.')
     }
