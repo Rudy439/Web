@@ -1,4 +1,6 @@
-class TreeFrog extends Animal {
+import {Animal} from './animal.js'
+
+export class TreeFrog extends Animal {
 
 
 
@@ -18,7 +20,7 @@ class TreeFrog extends Animal {
         }
         return document.getElementById("weather")
     }
-
+    
     makeForecast() {
         /*const forecast = "bude pekne"
         if (this._dead) {
@@ -54,7 +56,7 @@ class TreeFrog extends Animal {
                     var inputCity = document.getElementById("city-input").value;
                     var inputCountry = document.getElementById("country-input").value;
                     var api = apiForCoord;
-                    fetch('https://api.opencagedata.com/geocode/v1/json?q=' + city-input + ',' + country-input + '&key=' + api)
+                    fetch('https://api.opencagedata.com/geocode/v1/json?q=' + city-input + '%2C%20' + country-input + '&key=' + api)
                     .then( resp => {
                         if( !resp.ok ){
                             return (resp.statusText + " " + resp.status)
@@ -64,10 +66,21 @@ class TreeFrog extends Animal {
                     })    
                 
         }
+        .then(json =>{
+            if (json.result.length > 0 {//city
+                const lat = json.results[0].geometry.lat
+                const lng = json.results[0].geometry.lng 
+                const country =json.result[0] components   
+            }
+
+            })
+        }
+
+        
 
         // window.open('http://www.shmu.sk/');
-
     }
+    
 
     informWorld(message) {
         super.informWorld(message);
@@ -85,4 +98,4 @@ class TreeFrog extends Animal {
 
     }
 
-
+}
